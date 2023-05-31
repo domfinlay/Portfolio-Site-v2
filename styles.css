@@ -241,7 +241,7 @@ body {
 }
 
 #about-buttons {
-  border: 1px solid greenyellow;
+  /* border: 1px solid greenyellow; */
   width: 620px;
 }
 
@@ -402,7 +402,7 @@ footer p {
 }
 
 /* Ensures dropdown cannot be toggled on, then left on when viewport enlarged */
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1150px) {
   #dropdown, #dropdown li, #dropdown li a {
     display: none;
   }
@@ -411,6 +411,28 @@ footer p {
     display: block;
     position: absolute;
     right: 0;
+  }
+
+  /* Positions picture to the right in 'About' section */
+  /* TODO: Fix image from moving below about content in certain view widths. */
+  #about {
+    height: 50vh;
+  }
+
+  .about-content {
+    display: inline-block;
+    /* border: 1px solid greenyellow; */
+  }
+
+  #dom-pic-container {
+    position: relative;
+    display: inline-block;
+    /* border: 1px solid greenyellow; */
+    margin: 0 0 0 80px;
+    top: -40px;
+    width: 310px;
+    height: 310px;
+
   }
 }
 
