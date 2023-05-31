@@ -1,0 +1,599 @@
+:root {
+  --nav-colour: #7fc1ec;
+  --highlight-colour: rgb(125, 207, 221);
+  --splash-colour: rgb(125, 221, 173);
+  --portfolio-colour: rgb(208, 155, 212);
+  --card-colour: rgb(202, 77, 211);
+  --card-colour-hover: rgb(205, 94, 212);
+  --about-colour: rgb(221, 125, 125);
+  --contact-colour: rgb(221, 173, 125);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+/* Language classes */
+.kor {
+  display: none;
+  font-family: 'Dokdo', cursive;
+}
+
+.eng {
+  display: block;
+}
+
+/* Navbar */
+/* MAKE NAVBAR HAVE TACTILE BUTTONS */
+#myNavbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.navbar {
+  background-color: var(--nav-colour);
+  border-bottom: 6px solid black;
+  background-image: url("noise.svg");
+  width: 100vw;
+  height: 108px;
+}
+
+.navbar a {
+  font-family: "Darumadrop One", cursive;
+  font-size: 2.4rem;
+  display: inline-block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  width: fit-content;
+  margin: 0px 30px;
+}
+
+.navbar a:hover {
+  background-color: var(--highlight-colour);
+  background-image: url(noise.svg);
+  color: black;
+}
+
+#hamburger {
+  display: none;
+  user-select: none;
+}
+
+#dropdown {
+  display: none;
+}
+
+#dropdown li {
+  list-style-type: none;
+}
+
+#language {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+#language-dropdown {
+  cursor: pointer;
+}
+
+/* Splash section */
+#splash {
+  background-color: var(--splash-colour);
+  background-image: url("noise.svg");
+  height: calc(100vh - 108px);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 6px solid black;
+}
+
+.splash-content {
+  font-family: "Darumadrop One", cursive;
+  height: 100%;
+  width: 100%;
+  color: linen;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TODO: Make Korean Splash content larger */
+
+.splash-content h1 {
+  font-size: 8vw;
+  margin: 0;
+  -webkit-text-stroke: 4px black;
+  text-shadow: 4px 4px black;
+}
+
+.splash-content h2,
+.splash-content h3 {
+  font-size: 4vw;
+  margin: 0;
+  -webkit-text-stroke: 2px black;
+  text-shadow: 2px 2px black;
+}
+
+/* Portfolio section */
+#portfolio {
+  background-color: var(--portfolio-colour);
+  background-image: url("noise.svg");
+  height: fit-content;
+  border-bottom: 6px solid black;
+  padding: 20px;
+  text-align: center;
+  height: fit-content;
+}
+
+#portfolio-title {
+  font-family: "Darumadrop One", cursive;
+  text-align: center;
+  font-size: 4rem;
+}
+
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+  margin: 40px auto;
+  /* border: 1px solid red; */
+}
+
+.project-card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background-color: var(--card-colour);
+  background-image: url(noise.svg);
+  border: 6px solid black;
+  border-radius: 20px;
+  margin: 20px;
+  cursor: pointer;
+  z-index: 7;
+}
+
+.project-card:hover {
+  /* When user hovers over the card, flip it to reveal details*/
+  /* Reverse of card lets you click to get to live preview */
+  background-color: var(--card-colour-hover);
+}
+  
+.project-card:active {
+  transition: transform 250ms;
+  transform: translateY(4px);
+  box-shadow: 0px 0px 0px;
+}
+
+.card-shadow {
+  content: "";
+  position: relative;
+  left: 20px;
+  top: -416px;
+  width: 300px;
+  height: 400px;
+  background-color: black;
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.project-card h4 {
+  color: linen;
+  -webkit-text-stroke: 2px black;
+  font-family: "Darumadrop One", cursive;
+  text-align: center;
+  font-size: 2.6rem;
+  margin-top: 20px;
+}
+
+.project-card img {
+  margin-top: 10px;
+  height: 60%;
+  width: 90%;
+  border: 4px solid black;
+  border-radius: 15%;
+}
+
+.project-card p {
+  color: linen;
+  font-family: "Rowdies", sans-serif;
+  margin: 10px 20px;
+}
+
+
+/* Fix project cards, make them nicely spaced out, use display flex */
+
+/* About section */
+#about {
+  background-color: var(--about-colour);
+  background-image: url("noise.svg");
+  /* height: 100vh; */
+  width: 100vw;
+  border-bottom: 6px solid black;
+  padding-top: 10px;
+}
+
+#about-title {
+  font-family: "Darumadrop One", cursive;
+  text-align: center;
+  font-size: 4rem;
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+
+#about-buttons {
+  /* border: 1px solid greenyellow; */
+  width: 620px;
+}
+
+#short-long-toggle {
+  display: inline-block;
+  border: 4px solid black;
+  border-radius: 10px;
+  background-color: black;
+  background-image: url("noise.svg");
+  color: linen;
+  padding: 10px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  width: 246px;
+}
+
+#short-long-toggle:hover {
+  background-color: linen;
+  color: black;
+}
+
+/* #long-toggle {
+  display: inline-block;
+  border: 4px solid black;
+  border-radius: 10px;
+  background-image: url("noise.svg");
+  color: linen;
+  padding: 10px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  background-color: gray;
+  width: 246px;
+}
+
+#long-toggle:hover {
+  background-color: linen;
+  color: black;
+} */
+
+.about-content {
+  font-family: "Rowdies", sans-serif;
+  font-size: 1.6rem;
+  height: 60%;
+  width: 60%;
+  margin: 40px auto 60px 60px;
+  /* border: 1px solid greenyellow; */
+}
+
+/* #about-short {
+  border: 1px solid blue;
+}  */
+
+#about-long {
+  display: none;
+}
+
+#dom-pic {
+  position: relative;
+}
+
+/* Contact section */
+#contact {
+  background-color: var(--contact-colour);
+  background-image: url("noise.svg");
+  height: fit-content;
+  border-bottom: 6px solid black;
+  padding: 10px;
+}
+
+#contact-title {
+  font-family: "Darumadrop One", cursive;
+  text-align: center;
+  font-size: 4rem;
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+
+#contact label {
+  font-family: "Rowdies", sans-serif;
+  font-size: 1.3rem;
+}
+
+#contact-container {
+  margin: 20px auto;
+  width: 80%;
+}
+
+#contact-text {
+  background-color: linen;
+  border: 4px solid black;
+  border-radius: 12px;
+  width: 100%;
+}
+
+#contact button {
+  border: 4px solid black;
+  border-radius: 12px;
+  background-color: black;
+  background-image: url("noise.svg");
+  color: linen;
+  padding: 10px;
+  margin: 20px 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+#contact button:hover {
+  background-color: linen;
+  color: black;
+}
+
+/* Footer */
+footer {
+  font-family: "Rowdies", sans-serif;
+  background-color: var(--nav-colour);
+  background-image: url("noise.svg");
+  text-align: center;
+  font-size: 0.8rem;
+  height: 110px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#socials {
+  margin: 0 10px;
+}
+
+#socials a {
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000000;
+}
+
+#socials a:hover {
+  color: white;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensures dropdown cannot be toggled on, then left on when viewport enlarged */
+@media screen and (min-width: 1100px) {
+  #dropdown, #dropdown li, #dropdown li a {
+    display: none;
+  }
+
+  #not-dropdown {
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+}
+
+/* Responsive styles */
+/* Medium viewport */
+@media screen and (max-width: 1100px) and (min-width: 600px) {
+  .navbar {
+    height: 108px;
+  }
+
+  #not-dropdown,
+  #dropdown-home {
+    display: none;
+  }
+
+  #hamburger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    width: 80px;
+  }
+
+  #dropdown {
+    background-color: var(--nav-colour);
+    background-image: url("noise.svg");
+    border: 6px solid black;
+    border-top: 6px solid var(--nav-colour);
+    border-right: 6px solid var(--nav-colour);
+    position: absolute;
+    top: 102px;
+    right: 0;
+    width: fit-content;
+    padding: 10px;
+  }
+
+  .splash-content {
+    text-align: center;
+  }
+
+  .splash-content span:nth-of-type(2) {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .splash-content br {
+    display: none;
+  }
+
+  .splash-content h1 {
+    font-size: 12vw;
+  }
+
+  .splash-content h2 {
+    font-size: 6vw;
+  }
+
+  /* Make Portfolio responsive */
+  #portfolio {
+    height:fit-content;
+  }
+
+  #card-container {
+    height: 1320px;
+  }
+
+  .card-slot {
+    height: 440px;
+  }
+
+  .project-card {
+    margin: 20px;
+  }
+
+  .about-content {
+    text-align: center;
+    margin: auto;
+  }
+
+  #about-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 620px;
+    padding: 20px;
+    margin: auto;
+  }
+
+  #short-long-toggle {
+    margin: 20px auto;
+  }
+}
+
+/* Small viewport */
+/* Fix about and project sections being misaligned at center */
+@media screen and (max-width: 600px) {
+  .navbar {
+    height: 108px;
+  }
+
+  #not-dropdown,
+  #home {
+    display: none;
+  }
+
+  #dropdown {
+    background-color: var(--nav-colour);
+    background-image: url("noise.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 140px;
+    z-index: 1;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  #dropdown li a {
+    font-size: 12vw;
+  }
+
+  #hamburger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    width: 80px;
+    z-index: 2;
+  }
+
+  #splash {
+    width: 100%;
+  }
+
+  .splash-content {
+    text-align: center;
+  }
+
+  .splash-content span:nth-of-type(2) {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .splash-content br {
+    display: none;
+  }
+
+  .splash-content h1 {
+    font-size: 18vw;
+  }
+
+  .splash-content h2 {
+    font-size: 10vw;
+  }
+
+  /* Make Portfolio responsive */
+  #portfolio {
+    height:fit-content;
+  }
+
+  #card-container {
+    height: 1320px;
+  }
+
+  .card-slot {
+    height: 440px;
+  }
+
+  .project-card {
+    margin: 20px;
+  }
+
+  .about-content {
+    text-align: center;
+    margin: auto;
+  }
+
+  #about-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    padding: 20px;
+    margin: auto;
+  }
+
+  #short-long-toggle {
+    width: 150px;
+    font-size: 1.2rem;
+    margin: auto;
+    padding: 5px;
+  }
+
+  /* #long-toggle {
+    width: 150px;
+    font-size: 1.2rem;
+    margin: auto;
+    padding: 5px;
+  } */
+}

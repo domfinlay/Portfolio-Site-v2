@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dominic Finlay - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Darumadrop+One&family=Dokdo&family=Rowdies:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <!-- TODO: fix not scrolling to home when clicked in smallest viewport -->
+    <div id="home"></div>
+    <!-- Logo goes here -->
+    <!-- <img src="static/logo.png" alt="logo" /> -->
+    <div class="navbar" id="myNavbar">
+      <a href="#home" class="not-dropdown eng" id="home" lang="en">Home</a>
+      <a href="#home" class="not-dropdown kor" id="kor-home" lang="ko">홈</a>
+      <!-- <a onclick="toggleLanguage()" class="icon" id="language">한국어</a> -->
+      <a id="hamburger" class="icon" onclick="toggleNavbar()"> &#9776;</a>
+      <div id="not-dropdown">
+        <a href="#portfolio" class="eng">Portfolio</a>
+        <a href="#portfolio" class="kor" lang="ko">포트폴리오</a>
+        <a href="#about" class="eng">About</a>
+        <a href="#about" class="kor" lang="ko">소개</a>
+        <a href="#contact" class="eng">Contact</a>
+        <a href="#contact" class="kor" lang="ko">연락처</a>
+        <a onclick="toggleLanguage()" id="language" lang="ko">한국어</a>
+      </div>
+      <ul id="dropdown">
+        <li>
+          <a
+            href="#home"
+            class="dropdown-item eng"
+            id="dropdown-home"
+            onclick="toggleNavbar()"
+            >Home</a
+          >
+          <a
+            href="#home"
+            class="dropdown-item kor"
+            id="dropdown-kor-home"
+            onclick="toggleNavbar()"
+            lang="ko"
+            >홈</a
+          >
+        </li>
+        <li>
+          <a
+            href="#portfolio"
+            class="dropdown-item eng"
+            onclick="toggleNavbar()"
+            >Portfolio</a
+          >
+          <a
+            href="#portfolio"
+            class="dropdown-item kor"
+            onclick="toggleNavbar()"
+            lang="ko"
+            >포트폴리오</a
+          >
+        </li>
+        <li>
+          <a href="#about" class="dropdown-item eng" onclick="toggleNavbar()"
+            >About</a
+          >
+          <a
+            href="#about"
+            class="dropdown-item kor"
+            onclick="toggleNavbar()"
+            lang="ko"
+            >소개</a
+          >
+        </li>
+        <li>
+          <a href="#contact" class="dropdown-item eng" onclick="toggleNavbar()"
+            >Contact</a
+          >
+          <a
+            href="#contact"
+            class="dropdown-item kor"
+            onclick="toggleNavbar()"
+            lang="ko"
+            >연락처</a
+          >
+        </li>
+        <li>
+          <a
+            onclick="toggleLanguage()"
+            class="dropdown-item"
+            id="language-dropdown"
+            lang="ko"
+            >한국어</a
+          >
+        </li>
+      </ul>
+    </div>
+    <section id="splash">
+      <div class="splash-content">
+        <h1 class="eng"><span>Dominic</span> <span>Finlay,</span></h1>
+        <h2 class="kor" lang="ko">
+          <span>소프트웨어</span> <span>개발자</span>
+        </h2>
+        <br />
+        <h2 class="eng"><span>a Software </span><span>Developer.</span></h2>
+        <h1 class="kor" lang="ko"><span>도미닉</span></h1>
+      </div>
+    </section>
+    <section id="portfolio">
+      <h2 id="portfolio-title" class="eng">Projects</h2>
+      <h2 id="portfolio-title" class="kor" lang="ko">프로젝트</h2>
+      <div id="card-container">
+        <div class="card-slot">
+          <div class="project-card">
+            <h4 class="eng">Sseugiro</h4>
+            <img src="" />
+            <!-- Reverse side / expanded info -->
+            <!-- <p class="eng">test</p> -->
+          </div>
+          <div class="card-shadow"></div>
+        </div>
+        <div class="card-slot">
+          <div class="project-card">
+            <h4 class="eng">Pomodoro Timer</h4>
+            <h4 class="kor" lang="ko">포모도로 타이머</h4>
+            <img src="pomodoro.png" />
+            <!-- Reverse side / expanded info -->
+            <!-- <p class="eng">test</p> -->
+          </div>
+          <div class="card-shadow"></div>
+        </div>
+        <div class="card-slot">
+          <div class="project-card">
+            <h4 class="eng">Calculator</h4>
+            <h4 class="kor" lang="ko">계산기</h4>
+            <img src="" />
+            <!-- Reverse side / expanded info -->
+            <!-- <p class="eng">test</p> -->
+          </div>
+          <div class="card-shadow"></div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <h2 id="about-title" class="eng">About</h2>
+      <h2 id="about-title" class="kor" lang="ko">소개</h2>
+      <!-- Button toggling short/long version of About section. Current version is grayed out, but has border showing it is the current version displayed. -->
+      <!-- Perhaps just have one button -->
+      <!-- On hover, text scrolls and changes to 'the long version...' -->
+      <!-- Vice versa when toggled -->
+      <!-- Need to prevent long story display remaining as block after toggling language -->
+      <!-- jQuery animation to change button -->
+      <div id="about-buttons">
+        <a
+          onclick="toggleShortLong()"
+          class="about-content eng"
+          id="short-long-toggle"
+          >The short version...</a
+        >
+        <!-- TODO: FIX THIS jQuery animation -->
+        <!-- <script>
+          $(document).ready(function () {
+            $("#short-long-toggle").click(function () {
+              $("short-long-toggle").animate({
+                height: "toggle",
+              });
+            });
+          });
+        </script> -->
+      </div>
+      <div id="about-short" class="about-content eng">
+        <p>
+          Hi, I'm Dom, a self-taught software developer from Merseyside, UK.
+        </p>
+        <p>
+          I started learning to code while working as a teacher in South Korea,
+          and haven't looked back since.
+        </p>
+      </div>
+      <div id="about-long" class="about-content eng">
+        <p>Nice to meet you!</p>
+        <p>I'm Dom, a self-taught software developer from Merseyside, UK.</p>
+        <p>
+          I previously worked as a teacher in South Korea, becoming an effective
+          communicator, even through language and cultural barriers.
+        </p>
+        <p>
+          Despite being on track for a career in teaching, I had always been
+          curious about other directions, including programming. During a quiet
+          office hour, I took a break from honing my PowerPoint skills and began
+          learning to code.
+        </p>
+        <p>I quickly realised it was what I wanted to do.</p>
+        <p>
+          Since then, I've taken the time to learn not only to code, but,
+          without the deadlines of a bootcamp to motivate me, how to remain
+          consistent, plan my own curriculum, and push myself to continue
+          learning effectively.
+        </p>
+        <br />
+        <p>
+          Outside of coding, you can find me spending time taking and developing
+          pictures, trying to unearth musical gems from the depths of Spotify
+          and Bandcamp, watching weird old films, or playing with the family
+          dog.
+        </p>
+        <br />
+        <p>Thanks for reading! I look forward to working with you.</p>
+      </div>
+      <div><img src="dom.jpg" alt="A picture of me" id="dom-pic" /></div>
+      <!-- Section for programming languages, frameworks I have worked with. -->
+      <!-- Most comfortable section -->
+      <!-- Less comfortable section (find a better way of phrasing it) -->
+    </section>
+    <section id="contact">
+      <h2 id="contact-title" class="eng">Contact</h2>
+      <!-- Add mailto for email -->
+      <!-- Add social buttons: insta, github, linkedin -->
+      <!-- Ensure the links have target: _blank -->
+      <div id="contact-container">
+        <form>
+          <label for="contact-text">Send me a message:</label>
+          <textarea
+            id="contact-text"
+            placeholder=""
+            cols="48"
+            rows="8"
+            autofocus
+          ></textarea>
+          <button
+            type="submit"
+            href="mailto:finlaydominic1@gmail.com"
+            id="contact-button"
+            class="eng"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </section>
+  </body>
+  <footer>
+    <div class="container-fluid">
+      <div id="socials">
+        <a href="https://www.instagram.com/dompfinlay/" target="_blank"
+          ><i class="fa fa-instagram"></i
+        ></a>
+        <a href="https://github.com/domfinlay" target="_blank"
+          ><i class="fa fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/dominic-finlay-936288145/"
+          target="_blank"
+          ><i class="fa fa-linkedin"></i
+        ></a>
+      </div>
+      <div>
+        <p class="eng">&copy; Dominic Finlay 2023</p>
+        <p class="kor" lang="ko">&copy; 도미닉 핀레이 2023</p>
+        <p class="eng">Designed and built by Dominic Finlay</p>
+        <p class="kor" lang="ko">디자인 및 제작: 도미닉 핀레이</p>
+      </div>
+    </div>
+  </footer>
+</html>
