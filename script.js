@@ -90,3 +90,9 @@ function toggleShortLong() {
     long.style.display = "block";
   }
 }
+
+
+// Displays information about projects when clicked
+// function displayProject() {
+//   console.log("test");
+// }
