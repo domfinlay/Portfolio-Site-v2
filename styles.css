@@ -134,11 +134,10 @@ body {
 #portfolio {
   background-color: var(--portfolio-colour);
   background-image: url("noise.svg");
-  height: fit-content;
+  height: auto;
   border-bottom: 6px solid black;
   padding: 20px;
   text-align: center;
-  height: fit-content;
 }
 
 #portfolio-title {
@@ -150,12 +149,17 @@ body {
 #card-container {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
+  row-gap: 0px;
   justify-content: space-evenly;
   align-items: center;
-  height: 80%;
   width: 100%;
   margin: 40px auto;
-  /* border: 1px solid red; */
+  height: fit-content;
+}
+
+.card-slot {
+  height: 420px;
 }
 
 .project-card {
@@ -505,11 +509,7 @@ footer p {
 
   /* Make Portfolio responsive */
   #portfolio {
-    height:fit-content;
-  }
-
-  #card-container {
-    height: 1320px;
+    height: auto;
   }
 
   .card-slot {
@@ -611,7 +611,8 @@ footer p {
 
   /* Make Portfolio responsive */
   #portfolio {
-    height:fit-content;
+    height: auto;
+
   }
 
   #card-container {
