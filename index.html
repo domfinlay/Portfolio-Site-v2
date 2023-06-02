@@ -144,7 +144,7 @@
       <h2 id="portfolio-title" class="kor" lang="ko">프로젝트</h2>
       <div id="card-container">
         <div class="card-slot">
-          <div class="project-card">
+          <div class="project-card" onclick="displayProject()">
             <h4 class="eng">Sseugiro</h4>
             <img src="" />
             <!-- Reverse side / expanded info -->
@@ -153,7 +153,7 @@
           <div class="card-shadow"></div>
         </div>
         <div class="card-slot">
-          <div class="project-card">
+          <div class="project-card" onclick="displayProject()">
             <h4 class="eng">Pomodoro Timer</h4>
             <h4 class="kor" lang="ko">포모도로 타이머</h4>
             <img src="pomodoro.png" />
@@ -163,7 +163,7 @@
           <div class="card-shadow"></div>
         </div>
         <div class="card-slot">
-          <div class="project-card">
+          <div class="project-card" onclick="displayProject()">
             <h4 class="eng">Calculator</h4>
             <h4 class="kor" lang="ko">계산기</h4>
             <img src="calculator.png" />
@@ -183,13 +183,16 @@
       <!-- Vice versa when toggled -->
       <!-- Need to prevent long story display remaining as block after toggling language -->
       <!-- jQuery animation to change button -->
-      <div id="about-buttons">
+      <!-- CURRENTLY DISABLED -->
+
+      <!-- <div id="about-buttons">
         <a
           onclick="toggleShortLong()"
           class="about-content eng"
           id="short-long-toggle"
           >The short version...</a
-        >
+        > -->
+
         <!-- TODO: FIX THIS jQuery animation -->
         <!-- <script>
           $(document).ready(function () {
@@ -201,13 +204,20 @@
           });
         </script> -->
       </div>
+      <div id="about-copy-and-img">
       <div id="about-short" class="about-content eng">
         <p>
           Hi, I'm Dom, a self-taught software developer from Merseyside, UK.
         </p>
         <p>
           I started learning to code while working as a teacher in South Korea,
-          and haven't looked back since.
+          and haven't looked back since. I enjoy breaking down complex problems into simple steps, and building solutions that are both functional and elegant.
+        </p>
+        <p>
+          Outside of coding, you can find me spending time taking and developing
+          pictures, trying to unearth musical gems from the depths of Spotify
+          and Bandcamp, watching weird old films, or playing with the family
+          dog.
         </p>
       </div>
       <div id="about-long" class="about-content eng">
@@ -232,7 +242,7 @@
         </p>
         <br />
         <p>
-          Outside of coding, you can find me spending time taking and developing
+          Outside of coding, you can find me studying Korean, taking and developing
           pictures, trying to unearth musical gems from the depths of Spotify
           and Bandcamp, watching weird old films, or playing with the family
           dog.
@@ -241,6 +251,7 @@
         <p>Thanks for reading! I look forward to working with you.</p>
       </div>
       <div id="dom-pic-container"><img src="aboutmepic.jpeg" alt="A picture of me" id="dom-pic" /></div>
+    </div>
       <!-- Section for programming languages, frameworks I have worked with. -->
       <!-- Most comfortable section -->
       <!-- Less comfortable section (find a better way of phrasing it) -->
@@ -251,7 +262,7 @@
       <!-- Add social buttons: insta, github, linkedin -->
       <!-- Ensure the links have target: _blank -->
       <div id="contact-container">
-        <form>
+        <form action="mailto:finlaydominic1@gmail.com" method="GET">
           <label for="contact-text">Send me a message:</label>
           <textarea
             id="contact-text"
@@ -262,7 +273,6 @@
           ></textarea>
           <button
             type="submit"
-            href="mailto:finlaydominic1@gmail.com"
             id="contact-button"
             class="eng"
           >
