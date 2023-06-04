@@ -518,11 +518,12 @@ footer p {
   }
 
   .about-content {
+    width: 100%;
     text-align: center;
     margin: auto;
   }
 
-  #about-buttons {
+  /* #about-buttons {
     display: flex;
     justify-content: space-around;
     width: 620px;
@@ -538,7 +539,7 @@ footer p {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-  }
+  } */
 }
 
 /* Small viewport */
@@ -606,18 +607,9 @@ footer p {
     font-size: 10vw;
   }
 
-  /* Make Portfolio responsive */
   #portfolio {
     height: auto;
-
-  }
-
-  #card-container {
-    height: 1320px;
-  }
-
-  .card-slot {
-    height: 440px;
+    
   }
 
   .project-card {
@@ -627,9 +619,10 @@ footer p {
   .about-content {
     text-align: center;
     margin: auto;
+    width: 100%;
   }
 
-  #about-buttons {
+  /* #about-buttons {
     display: flex;
     justify-content: space-between;
     width: 400px;
@@ -642,7 +635,7 @@ footer p {
     font-size: 1.2rem;
     margin: auto;
     padding: 5px;
-  }
+  } */
 
   /* #long-toggle {
     width: 150px;
