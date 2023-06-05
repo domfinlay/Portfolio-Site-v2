@@ -148,10 +148,13 @@
         <h1 class="kor" lang="ko"><span>도미닉</span></h1>
       </div>
     </section>
+
+    <!-- Portfolio section -->
     <section id="portfolio">
       <div id="portfolio-scroll"></div>
       <!-- Div to display specific project info when clicked -->
-      <div id="project-info"></div>
+      <div id="project-info" style="display: none;"></div>
+      <div id="project-cards">
       <h2 id="portfolio-title" class="eng">Projects</h2>
       <h2 id="portfolio-title" class="kor" lang="ko">프로젝트</h2>
       <div id="card-container">
@@ -165,7 +168,7 @@
           <div class="card-shadow"></div>
         </div>
         <div class="card-slot">
-          <div class="project-card" onclick="displayProject()">
+          <div class="project-card" onclick="displayProject('pomodoro')" value="pomodoro">
             <h4 class="eng">Pomodoro Timer</h4>
             <h4 class="kor" lang="ko">포모도로 타이머</h4>
             <img src="pomodoro.png" />
@@ -175,7 +178,7 @@
           <div class="card-shadow"></div>
         </div>
         <div class="card-slot">
-          <div class="project-card front" onclick="displayProject()">
+          <div class="project-card front" onclick="displayProject('calculator')" value="calculator">
             <h4 class="eng">Calculator</h4>
             <h4 class="kor" lang="ko">계산기</h4>
             <img src="calculator.png" />
@@ -193,7 +196,18 @@
             <!-- <p class="eng">test</p> -->
           </div>
           <div class="card-shadow"></div>
+          <!-- <div class="card-slot">
+            <div class="project-card" onclick="displayProject('pass-the-ball')" value="pass-the-ball">
+              <h4 class="eng">Pass the Ball</h4>
+              <h4 class="kor" lang="ko">테스트</h4>
+              <img src="" />
+              Reverse side / expanded info
+              <p class="eng">test</p>
+            </div>
+            <div class="card-shadow"></div> -->
         </div>
+      </div>
+      </div>
       </div>
       <!-- TODO: Add MORE PROJECTS button showing more simple projects. Have a 'featured'/main projects section showing largest projects. -->
     </section>

@@ -234,8 +234,52 @@ body {
   margin: 10px 20px;
 }
 
+/* Project Info section, displayed when a card is clicked */
+.project-display {
+  position: relative;
+  margin: 40px 60px;
+}
 
-/* Fix project cards, make them nicely spaced out, use display flex */
+.exit-project-info {
+  font-family: "Rowdies", sans-serif;
+  font-size: 1.1rem;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background-color: var(--card-colour);
+  background-image: url(noise.svg);
+  border: 4px solid black;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+.exit-project-info:hover {
+  cursor: pointer;
+  background-color: var(--card-colour-hover);
+}
+
+.coding-languages {
+  font-size: 5rem;
+  padding: 30px;
+}
+
+.project-description {
+  font-family: "Rowdies", sans-serif;
+  font-size: 1.6rem;
+}
+
+.demo-links {
+  font-family: "Rowdies", sans-serif;
+  font-size: 1.4rem;
+  display: inline-block;
+}
+
+.demo-links a {
+  font-size: 6rem;
+  text-decoration: none;
+
+  padding: 25px;
+}
 
 /* About section */
 #about {

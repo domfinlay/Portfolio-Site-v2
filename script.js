@@ -104,4 +104,12 @@ function displayProject(project) {
   console.log("test");
   console.log(project)
   $("#project-info").load(`${project}-info.html`);
+  $("#project-info").slideToggle();
+  $("#project-cards").slideToggle();
+}
+
+function hideProject() {
+  $("#project-info").slideToggle();
+  $("#project-info").empty();
+  $("#project-cards").slideToggle();
 }
