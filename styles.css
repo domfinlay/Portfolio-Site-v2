@@ -616,6 +616,10 @@ footer p {
     margin: 20px;
   }
 
+  #about {
+    padding: 35px;
+  }
+
   .about-content {
     text-align: center;
     margin: auto;
