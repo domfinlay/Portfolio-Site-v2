@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // TODO: Make button stay as 'The Long Version...' when the long version is displayed
 });
 
+// Toggles navbar dropdown when hamburger is clicked
 function toggleNavbar() {
   var dropdown = document.getElementById("dropdown");
   var hamburger = document.getElementById("hamburger");
@@ -41,6 +42,7 @@ function toggleNavbar() {
 
 // Fix toggle language displaying things that should be hidden when switching languages
 // E.g. hide long 'about me' by default (BUG: both long and short stories displayed after toggling language)
+// Currently inactive
 function toggleLanguage() {
   var hideOnToggle = [];
 
@@ -78,6 +80,8 @@ function toggleLanguage() {
   }
 }
 
+// Toggles between long and short versions of 'about me' section
+// Currently inactive
 function toggleShortLong() {
   var short = document.getElementById("about-short");
   var long = document.getElementById("about-long");
@@ -90,7 +94,6 @@ function toggleShortLong() {
     long.style.display = "block";
   }
 }
-
 
 // Displays information about projects when clicked
 // TODO: Make this work
