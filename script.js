@@ -101,15 +101,15 @@ function toggleShortLong() {
 // Becomes iframe? Or just a div that takes up the whole section?
 
 function displayProject(project) {
-  console.log("test");
-  console.log(project)
   $("#project-info").load(`${project}-info.html`);
   $("#project-info").slideToggle();
   $("#project-cards").slideToggle();
+  $("project-scroll").get(0).scrollIntoView({behavior: 'smooth'});
 }
 
 function hideProject() {
   $("#project-info").slideToggle();
   $("#project-info").empty();
   $("#project-cards").slideToggle();
+  $("project-scroll").get(0).scrollIntoView({behavior: 'smooth'});
 }
