@@ -7,22 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dominic Finlay - Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Darumadrop+One&family=Dokdo&family=Rowdies:wght@300;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome Social Media Logos -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- Link for coding language/framework logos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <!-- jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -33,6 +39,7 @@
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous"
     ></script>
+    <!-- Bootstrap JS-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
@@ -143,6 +150,8 @@
     </section>
     <section id="portfolio">
       <div id="portfolio-scroll"></div>
+      <!-- Div to display specific project info when clicked -->
+      <div id="project-info"></div>
       <h2 id="portfolio-title" class="eng">Projects</h2>
       <h2 id="portfolio-title" class="kor" lang="ko">프로젝트</h2>
       <div id="card-container">
@@ -166,7 +175,7 @@
           <div class="card-shadow"></div>
         </div>
         <div class="card-slot">
-          <div class="project-card" onclick="displayProject()">
+          <div class="project-card front" onclick="displayProject()">
             <h4 class="eng">Calculator</h4>
             <h4 class="kor" lang="ko">계산기</h4>
             <img src="calculator.png" />
@@ -176,7 +185,7 @@
           <div class="card-shadow"></div>
         </div>
         <div class="card-slot">
-          <div class="project-card" onclick="displayProject()">
+          <div class="project-card" onclick="displayProject('drum-machine')" value="drum-machine">
             <h4 class="eng">Drum Machine</h4>
             <h4 class="kor" lang="ko">계산기</h4>
             <img src="drum machine.png" />

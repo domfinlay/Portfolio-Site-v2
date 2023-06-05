@@ -99,6 +99,9 @@ function toggleShortLong() {
 // TODO: Make this work
 // Project info becomes full size of project section. Has link to project and link to github
 // Becomes iframe? Or just a div that takes up the whole section?
-function displayProject() {
+
+function displayProject(project) {
   console.log("test");
+  console.log(project)
+  $("#project-info").load(`${project}-info.html`);
 }

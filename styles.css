@@ -542,7 +542,7 @@ footer p {
   .about-content {
     width: 100%;
     text-align: center;
-    margin: auto;
+    margin: 30px auto;
   }
 
   /* #about-buttons {
@@ -648,7 +648,7 @@ footer p {
 
   .about-content {
     text-align: center;
-    margin: auto;
+    margin: 30px auto;
     width: 100%;
   }
 
