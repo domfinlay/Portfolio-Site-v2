@@ -138,6 +138,17 @@ body {
   border-bottom: 6px solid black;
   padding: 20px;
   text-align: center;
+  position: relative;
+}
+
+#portfolio-scroll {
+  height: 108px;
+  position: absolute;
+  top: -108px;
+  left: 0;
+  width: 100vw;
+  margin-left: 0;
+  overflow: hidden;
 }
 
 #portfolio-title {
@@ -235,6 +246,17 @@ body {
   height: fit-content;
   border-bottom: 6px solid black;
   padding: 20px 80px;
+  position: relative;
+}
+
+#about-scroll {
+  height: 108px;
+  position: absolute;
+  top: -108px;
+  left: 0;
+  width: 100vw;
+  margin-left: 0;
+  overflow: hidden;
 }
 
 #about-title {
@@ -246,7 +268,6 @@ body {
 }
 
 #about-buttons {
-  /* border: 1px solid greenyellow; */
   width: 620px;
 }
 
@@ -308,6 +329,7 @@ body {
   justify-content: space-around;
 }
 
+/* TODO: Center Dom pic */
 #dom-pic-container {
   /* border: 1px solid green; */
   /* display: flex;
@@ -540,6 +562,10 @@ footer p {
     justify-content: center;
     margin: 0 auto;
   } */
+
+  #dom-pic-container {
+    margin: 0 auto;
+  }
 }
 
 /* Small viewport */
@@ -651,6 +677,15 @@ footer p {
   #about-copy-and-img {
     display: flex;
     justify-content: center;
+    margin: 0 auto;
+  }
+
+  #dom-pic-container {
+    margin: 0 auto;
+    /* border: 1px solid green; */
+  }
+
+  #dom-pic {
     margin: 0 auto;
   }
 }

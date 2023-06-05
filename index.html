@@ -54,10 +54,10 @@
       <!-- <a onclick="toggleLanguage()" class="icon" id="language">한국어</a> -->
       <a id="hamburger" class="icon" onclick="toggleNavbar()"> &#9776;</a>
       <div id="not-dropdown">
-        <a href="#portfolio" class="eng">Portfolio</a>
-        <a href="#portfolio" class="kor" lang="ko">포트폴리오</a>
-        <a href="#about" class="eng">About</a>
-        <a href="#about" class="kor" lang="ko">소개</a>
+        <a href="#portfolio-scroll" class="eng">Portfolio</a>
+        <a href="#portfolio-scroll" class="kor" lang="ko">포트폴리오</a>
+        <a href="#about-scroll" class="eng">About</a>
+        <a href="#about-scroll" class="kor" lang="ko">소개</a>
         <a href="#contact" class="eng">Contact</a>
         <a href="#contact" class="kor" lang="ko">연락처</a>
         <!-- <a onclick="toggleLanguage()" id="language" lang="ko">한국어</a> -->
@@ -82,13 +82,13 @@
         </li>
         <li>
           <a
-            href="#portfolio"
+            href="#portfolio-scroll"
             class="dropdown-item eng"
             onclick="toggleNavbar()"
             >Portfolio</a
           >
           <a
-            href="#portfolio"
+            href="#portfolio-scroll"
             class="dropdown-item kor"
             onclick="toggleNavbar()"
             lang="ko"
@@ -96,11 +96,11 @@
           >
         </li>
         <li>
-          <a href="#about" class="dropdown-item eng" onclick="toggleNavbar()"
+          <a href="#about-scroll" class="dropdown-item eng" onclick="toggleNavbar()"
             >About</a
           >
           <a
-            href="#about"
+            href="#about-scroll"
             class="dropdown-item kor"
             onclick="toggleNavbar()"
             lang="ko"
@@ -142,6 +142,7 @@
       </div>
     </section>
     <section id="portfolio">
+      <div id="portfolio-scroll"></div>
       <h2 id="portfolio-title" class="eng">Projects</h2>
       <h2 id="portfolio-title" class="kor" lang="ko">프로젝트</h2>
       <div id="card-container">
@@ -188,6 +189,7 @@
       <!-- TODO: Add MORE PROJECTS button showing more simple projects. Have a 'featured'/main projects section showing largest projects. -->
     </section>
     <section id="about">
+      <div id="about-scroll"></div>
       <h2 id="about-title" class="eng">About</h2>
       <h2 id="about-title" class="kor" lang="ko">소개</h2>
       <!-- Button toggling short/long version of About section. Current version is grayed out, but has border showing it is the current version displayed. -->
