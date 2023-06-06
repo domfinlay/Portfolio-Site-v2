@@ -33,67 +33,67 @@ function toggleNavbar() {
 
   if (dropdown.style.display == "none") {
     hamburger.innerHTML = "&times;"; // Change icon to close symbol when clicked
-    dropdown.style.display = "block";
+    $(dropdown).slideToggle(200);
   } else {
     hamburger.innerHTML = "&#9776;"; // Change icon back to hamburger when clicked
-    dropdown.style.display = "none";
+    $(dropdown).slideToggle(200);
   }
 }
 
 // Fix toggle language displaying things that should be hidden when switching languages
 // E.g. hide long 'about me' by default (BUG: both long and short stories displayed after toggling language)
 // Currently inactive
-function toggleLanguage() {
-  var hideOnToggle = [];
+// function toggleLanguage() {
+//   var hideOnToggle = [];
 
-  if (language == "eng") {
-    language = "kor";
-    for (var i = 0; i < englishItems.length; i++) {
-      if (englishItems[i].style.display == "none") {
-        hideOnToggle.push(englishItems[i]);
-      } else {
-        englishItems[i].style.display = "none";
-      }
-    }
-    for (var i = 0; i < koreanItems.length; i++) {
-      koreanItems[i].style.display = "inline-block";
-    }
-    document.getElementById("language").innerHTML = "English";
-    document.getElementById("language-dropdown").innerHTML = "English";
-  } else {
-    language = "eng";
-    for (var i = 0; i < englishItems.length; i++) {
-      if (hideOnToggle.includes(englishItems[i])) {
-        englishItems[i].style.display = "none";
-      } else {
-        englishItems[i].style.display = "inline-block";
-      }
-    }
-    for (var i = 0; i < koreanItems.length; i++) {
-      if (koreanItems[i].style.display == "none") {
-        hideOnToggle.push(koreanItems[i]);
-      }
-      koreanItems[i].style.display = "none";
-    }
-    document.getElementById("language").innerHTML = "한국어";
-    document.getElementById("language-dropdown").innerHTML = "하국어";
-  }
-}
+//   if (language == "eng") {
+//     language = "kor";
+//     for (var i = 0; i < englishItems.length; i++) {
+//       if (englishItems[i].style.display == "none") {
+//         hideOnToggle.push(englishItems[i]);
+//       } else {
+//         englishItems[i].style.display = "none";
+//       }
+//     }
+//     for (var i = 0; i < koreanItems.length; i++) {
+//       koreanItems[i].style.display = "inline-block";
+//     }
+//     document.getElementById("language").innerHTML = "English";
+//     document.getElementById("language-dropdown").innerHTML = "English";
+//   } else {
+//     language = "eng";
+//     for (var i = 0; i < englishItems.length; i++) {
+//       if (hideOnToggle.includes(englishItems[i])) {
+//         englishItems[i].style.display = "none";
+//       } else {
+//         englishItems[i].style.display = "inline-block";
+//       }
+//     }
+//     for (var i = 0; i < koreanItems.length; i++) {
+//       if (koreanItems[i].style.display == "none") {
+//         hideOnToggle.push(koreanItems[i]);
+//       }
+//       koreanItems[i].style.display = "none";
+//     }
+//     document.getElementById("language").innerHTML = "한국어";
+//     document.getElementById("language-dropdown").innerHTML = "하국어";
+//   }
+// }
 
 // Toggles between long and short versions of 'about me' section
 // Currently inactive
-function toggleShortLong() {
-  var short = document.getElementById("about-short");
-  var long = document.getElementById("about-long");
+// function toggleShortLong() {
+//   var short = document.getElementById("about-short");
+//   var long = document.getElementById("about-long");
 
-  if (short.style.display == "none") {
-    short.style.display = "block";
-    long.style.display = "none";
-  } else {
-    short.style.display = "none";
-    long.style.display = "block";
-  }
-}
+//   if (short.style.display == "none") {
+//     short.style.display = "block";
+//     long.style.display = "none";
+//   } else {
+//     short.style.display = "none";
+//     long.style.display = "block";
+//   }
+// }
 
 // Displays information about projects when clicked
 // TODO: Make this work
@@ -102,15 +102,18 @@ function toggleShortLong() {
 
 function displayProject(project) {
   $("#project-info").load(`${project}-info.html`);
-  $("#project-info").slideToggle();
-  $("#project-cards").slideToggle();
-  $("project-scroll").get(0).scrollIntoView({behavior: 'smooth'});
+  $("#project-cards").slideToggle(400, function() {
+    $("#project-info").slideToggle();
+  });
+  // // TODO: Make scrollIntoView work
+  $("project-scroll").scrollIntoView({behavior: 'smooth'});
 }
 
 function hideProject() {
-  $("#project-info").slideToggle();
-  $("#project-info").empty();
-  $("#project-cards").slideToggle();
-  // TODO: Make scrollIntoView work
+  $("#project-info").slideToggle(400, function() {
+    $("#project-info").empty();
+    $("#project-cards").slideToggle();
+  });
+  // // TODO: Make scrollIntoView work
   $("project-scroll").get(0).scrollIntoView({behavior: 'smooth'});
 }
