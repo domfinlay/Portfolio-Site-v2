@@ -111,5 +111,6 @@ function hideProject() {
   $("#project-info").slideToggle();
   $("#project-info").empty();
   $("#project-cards").slideToggle();
+  // TODO: Make scrollIntoView work
   $("project-scroll").get(0).scrollIntoView({behavior: 'smooth'});
 }
