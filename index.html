@@ -51,8 +51,7 @@
   </head>
 
   <body>
-    <!-- TODO: fix not scrolling to home when clicked in smallest viewport -->
-    <div id="home"></div>
+    <div id="home-scroll"></div>
     <!-- Logo goes here -->
     <!-- <img src="static/logo.png" alt="logo" /> -->
     <div class="navbar" id="myNavbar">
@@ -72,14 +71,14 @@
       <ul id="dropdown" style="display: none;">
         <li>
           <a
-            href="#home"
+            href="#home-scroll"
             class="dropdown-item eng"
             id="dropdown-home"
             onclick="toggleNavbar()"
             >Home</a
           >
           <a
-            href="#home"
+            href="#home-scroll"
             class="dropdown-item kor"
             id="dropdown-kor-home"
             onclick="toggleNavbar()"

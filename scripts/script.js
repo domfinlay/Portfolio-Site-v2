@@ -106,7 +106,7 @@ function displayProject(project) {
     $("#project-info").slideToggle();
   });
   // // TODO: Make scrollIntoView work
-  $("project-scroll").scrollIntoView({behavior: 'smooth'});
+  $("#portfolio-scroll").get(0).scrollIntoView({behavior: 'smooth'});
 }
 
 function hideProject() {
@@ -115,5 +115,5 @@ function hideProject() {
     $("#project-cards").slideToggle();
   });
   // // TODO: Make scrollIntoView work
-  $("project-scroll").get(0).scrollIntoView({behavior: 'smooth'});
+  $("#portfolio-scroll").get(0).scrollIntoView({behavior: 'smooth'});
 }
