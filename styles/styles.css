@@ -60,12 +60,14 @@ body {
   text-decoration: none;
   width: fit-content;
   margin: 0px 30px;
+  border-radius: 20px;
 }
 
 .navbar a:hover {
   background-color: var(--highlight-colour);
   background-image: url(../noise.svg);
   color: black;
+  text-decoration: none;
 }
 
 #hamburger {
@@ -668,7 +670,7 @@ footer p {
 
   .about-content {
     width: 100%;
-    text-align: center;
+    text-align: left;
     margin: 30px auto;
   }
 
@@ -805,7 +807,6 @@ footer p {
   .project-description {
     position: relative;
     display: inline-block;
-    text-align: left;
     width: 240px;
     padding: 10px;
     margin: 20px 10px 10px 10px;
@@ -836,7 +837,6 @@ footer p {
   }
 
   .about-content {
-    text-align: center;
     margin: 30px auto;
     width: 100%;
   }
