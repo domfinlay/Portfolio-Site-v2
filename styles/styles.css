@@ -668,6 +668,10 @@ footer p {
     vertical-align: middle;
   }
 
+  #about {
+    padding: 24px;
+  }
+
   .about-content {
     width: 100%;
     text-align: left;
@@ -833,7 +837,7 @@ footer p {
   }
 
   #about {
-    padding: 35px;
+    padding: 20px;
   }
 
   .about-content {
