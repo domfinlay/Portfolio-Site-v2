@@ -424,12 +424,12 @@ body {
 #dom-pic {
   position: relative;
   margin: 20px auto 40px;
-  border: 4px solid black;
+  border: 6px solid black;
   border-radius: 50%;
   object-fit: cover;
   height: 300px;
   width: 300px;
-  box-shadow: 6px 6px 10px;
+  box-shadow: 0px 6px 0px black;
 }
 
 /* Contact section */
@@ -459,7 +459,7 @@ body {
   width: 80%;
 }
 
-#contact-text {
+#contact-text, #email {
   background-color: linen;
   border: 4px solid black;
   border-radius: 12px;

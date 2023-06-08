@@ -294,11 +294,12 @@
     </section>
     <section id="contact">
       <h2 id="contact-title" class="eng">Contact</h2>
-      <!-- Add mailto for email -->
-      <!-- Add social buttons: insta, github, linkedin -->
-      <!-- Ensure the links have target: _blank -->
+      <!-- TODO: integrate email into mailto -->
       <div id="contact-container">
-        <form action="mailto:finlaydominic1@gmail.com" method="GET">
+        <form action="mailto:finlaydominic1@gmail.com" method="POST">
+          <label for="email">Your email:</label>
+          <input type="email" name="email" id="email" class="email" />
+          <br>
           <label for="contact-text">Send me a message:</label>
           <textarea
             id="contact-text"
