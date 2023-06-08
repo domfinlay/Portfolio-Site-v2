@@ -70,6 +70,16 @@ body {
   text-decoration: none;
 }
 
+#home {
+  margin-left: 0px;
+}
+
+#home img {
+  width: 220px;
+  height: auto;
+  vertical-align: top;
+}
+
 #hamburger {
   display: none;
   user-select: none;
