@@ -623,15 +623,16 @@ footer p {
   }
 
   .project-display {
-    width: 100vw;
+    width: 90vw;
     height: 100%;
-    margin: 0;
+    margin: 16px auto;
   }
   
   .project-display h4 {
     position: relative;
     display: inline-block;
     font-size: 3rem;
+    /* border: 1px solid green; */
   }
   
   .project-display img {
@@ -650,6 +651,7 @@ footer p {
     padding: 10px;
     margin: 20px 10px 10px 10px;
     font-size: 1.4rem;
+    /* border: 1px solid red; */
   }
   
   .demo-links {
