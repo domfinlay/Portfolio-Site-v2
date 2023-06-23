@@ -10,9 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
     koreanItems[i].style.display = "none";
   }
 
-  // Scrolling to home on DOM load - workaround to fix bug where page scrolls to bottom on load.
-  // $("#home-scroll").get(0).scrollIntoView({behavior: 'smooth'});
-
   $("#splash-button").on('click', function() {
     $("#contact").get(0).scrollIntoView({behavior: 'smooth'});
   });

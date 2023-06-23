@@ -652,6 +652,12 @@ body {
   padding: 10px;
 }
 
+#contact p {
+  font-family: 'Rowdies', sans-serif;
+  width: 300px;
+  margin: 10px auto;
+}
+
 #contact-title {
   font-family: "Darumadrop One", cursive;
   text-align: center;
