@@ -453,6 +453,11 @@ body {
 }
 
 @media screen and (max-width: 1100px) {
+  .project-display h1 {
+    font-size: 3.4rem;
+    margin: 20px auto 0px;
+  }
+
   .divider {
     display: block;
     border: 2px solid black;
@@ -473,32 +478,49 @@ body {
   .screenshot {
     display: block;
     height: auto;
-    width: 400px;
+    width: 95%;
     margin: 0 auto;
   }
 
   .description-container {
-    display: block;
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
-    width: fit-content;
+    width: 95%;
+    height: fit-content;
+  }
+
+  .project-description {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .tools-container {
     display: block;
     margin: 0 auto;
-    width: fit-content;
+    width: 95%;
     text-align: center;
+  }
+
+  .tools {
+    width: 90%;
+    height: fit-content;
+    margin: 0 auto;
   }
 
   .demo-container {
     display: block;
     margin: 0px auto;
-    width: fit-content;
+    width: 95%;
     text-align: center;
+    height: fit-content;
   }
 
   .links {
+    width: 90%;
     margin: 0px auto;
+    height: fit-content;
   }
 }
 
