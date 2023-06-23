@@ -57,24 +57,23 @@
     <div id="home-scroll"></div>
     <div class="navbar" id="myNavbar">
       <!-- Logo goes here -->
-      <a href="#home-scroll" class="not-dropdown eng" id="home" lang="en"><img src="images/dflogo.png" /></a>
+      <a class="not-dropdown eng home-scroll" id="home" lang="en"><img src="images/dflogo.png" /></a>
       <!-- <a href="#home-scroll" class="not-dropdown kor" id="kor-home" lang="ko">홈</a> -->
       <!-- <a onclick="toggleLanguage()" class="icon" id="language">한국어</a> -->
       <a id="hamburger" class="icon" onclick="toggleNavbar()"> &#9776;</a>
       <div id="not-dropdown">
-        <a href="#portfolio-scroll" class="eng">Portfolio</a>
+        <a class="eng portfolio-scroll">Portfolio</a>
         <!-- <a href="#portfolio-scroll" class="kor" lang="ko">포트폴리오</a> -->
-        <a href="#about-scroll" class="eng">About</a>
+        <a class="eng about-scroll">About</a>
         <!-- <a href="#about-scroll" class="kor" lang="ko">소개</a> -->
-        <a href="#contact" class="eng">Contact</a>
+        <a class="eng contact-scroll">Contact</a>
         <!-- <a href="#contact" class="kor" lang="ko">연락처</a> -->
         <!-- <a onclick="toggleLanguage()" id="language" lang="ko">한국어</a> -->
       </div>
       <ul id="dropdown" style="display: none;">
         <li>
           <a
-            href="#home-scroll"
-            class="dropdown-item eng"
+            class="dropdown-item eng home-scroll"
             id="dropdown-home"
             onclick="toggleNavbar()"
             >Home</a
@@ -90,8 +89,7 @@
         </li>
         <li>
           <a
-            href="#portfolio-scroll"
-            class="dropdown-item eng"
+            class="dropdown-item eng portfolio-scroll"
             onclick="toggleNavbar()"
             >Portfolio</a
           >
@@ -104,7 +102,7 @@
           > -->
         </li>
         <li>
-          <a href="#about-scroll" class="dropdown-item eng" onclick="toggleNavbar()"
+          <a  class="dropdown-item eng about-scroll" onclick="toggleNavbar()"
             >About</a
           >
           <!-- <a
@@ -116,7 +114,7 @@
           > -->
         </li>
         <li>
-          <a href="#contact" class="dropdown-item eng" onclick="toggleNavbar()"
+          <a class="dropdown-item eng contact-scroll" onclick="toggleNavbar()"
             >Contact</a
           >
           <!-- <a
@@ -148,7 +146,7 @@
         <br />
         <h2 class="eng"><span>a Software </span><span>Developer.</span></h2>
         <!-- <h1 class="kor" lang="ko"><span>도미닉</span></h1> -->
-        <a id="splash-button" href="#contact">Let's talk.</a>
+        <a id="splash-button">Let's talk.</a>
         <div id="splash-button-shadow"></div>
       </div>
     </section>

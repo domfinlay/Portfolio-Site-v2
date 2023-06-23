@@ -13,6 +13,26 @@ document.addEventListener("DOMContentLoaded", function () {
   // Scrolling to home on DOM load - workaround to fix bug where page scrolls to bottom on load.
   $("#home-scroll").get(0).scrollIntoView({behavior: 'smooth'});
 
+  $("#splash-button").on('click', function() {
+    $("#contact").get(0).scrollIntoView({behavior: 'smooth'});
+  });
+
+  $('.home-scroll').on('click', function() {
+    $("#home-scroll").get(0).scrollIntoView({behavior: 'smooth'});
+  });
+
+  $('.portfolio-scroll').on('click', function() {
+    $("#portfolio-scroll").get(0).scrollIntoView({behavior: 'smooth'});
+  });
+
+  $('.about-scroll').on('click', function() {
+    $("#about-scroll").get(0).scrollIntoView({behavior: 'smooth'});
+  });
+
+  $('.contact-scroll').on('click', function() {
+    $("#contact").get(0).scrollIntoView({behavior: 'smooth'});
+  });
+
   // Function to toggle long and short versions of 'about me' section (currently disabled)
 
   // document
@@ -43,6 +63,22 @@ function toggleNavbar() {
     hamburger.innerHTML = "&#9776;"; // Change icon back to hamburger when clicked
     $(dropdown).slideToggle(200);
   }
+}
+
+function displayProject(project) {
+  $("#project-info").load(`${project}-info.html`);
+  $("#project-cards").slideToggle(400, function() {
+    $("#project-info").slideToggle();
+  });
+  $("#portfolio-scroll").get(0).scrollIntoView({behavior: 'smooth'});
+}
+
+function hideProject() {
+  $("#project-info").slideToggle(400, function() {
+    $("#project-info").empty();
+    $("#project-cards").slideToggle();
+  });
+  $("#portfolio-scroll").get(0).scrollIntoView({behavior: 'smooth'});
 }
 
 // Fix toggle language displaying things that should be hidden when switching languages
@@ -104,19 +140,3 @@ function toggleNavbar() {
 // TODO: Make this work
 // Project info becomes full size of project section. Has link to project and link to github
 // Becomes iframe? Or just a div that takes up the whole section?
-
-function displayProject(project) {
-  $("#project-info").load(`${project}-info.html`);
-  $("#project-cards").slideToggle(400, function() {
-    $("#project-info").slideToggle();
-  });
-  $("#portfolio-scroll").get(0).scrollIntoView({behavior: 'smooth'});
-}
-
-function hideProject() {
-  $("#project-info").slideToggle(400, function() {
-    $("#project-info").empty();
-    $("#project-cards").slideToggle();
-  });
-  $("#portfolio-scroll").get(0).scrollIntoView({behavior: 'smooth'});
-}

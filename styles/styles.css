@@ -94,6 +94,10 @@ body {
   list-style-type: none;
 }
 
+.home-scroll, .portfolio-scroll, .about-scroll, .contact-scroll {
+  cursor: pointer;
+}
+
 #language {
   font-size: 1.6rem;
   cursor: pointer;
@@ -483,10 +487,11 @@ body {
   }
 
   .description-container {
+    border: 1px solid red;
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    width: 95%;
+    width: 98%;
     height: fit-content;
   }
 
