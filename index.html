@@ -58,16 +58,16 @@
     <div class="navbar" id="myNavbar">
       <!-- Logo goes here -->
       <a href="#home-scroll" class="not-dropdown eng" id="home" lang="en"><img src="images/dflogo.png" /></a>
-      <a href="#home-scroll" class="not-dropdown kor" id="kor-home" lang="ko">홈</a>
+      <!-- <a href="#home-scroll" class="not-dropdown kor" id="kor-home" lang="ko">홈</a> -->
       <!-- <a onclick="toggleLanguage()" class="icon" id="language">한국어</a> -->
       <a id="hamburger" class="icon" onclick="toggleNavbar()"> &#9776;</a>
       <div id="not-dropdown">
         <a href="#portfolio-scroll" class="eng">Portfolio</a>
-        <a href="#portfolio-scroll" class="kor" lang="ko">포트폴리오</a>
+        <!-- <a href="#portfolio-scroll" class="kor" lang="ko">포트폴리오</a> -->
         <a href="#about-scroll" class="eng">About</a>
-        <a href="#about-scroll" class="kor" lang="ko">소개</a>
+        <!-- <a href="#about-scroll" class="kor" lang="ko">소개</a> -->
         <a href="#contact" class="eng">Contact</a>
-        <a href="#contact" class="kor" lang="ko">연락처</a>
+        <!-- <a href="#contact" class="kor" lang="ko">연락처</a> -->
         <!-- <a onclick="toggleLanguage()" id="language" lang="ko">한국어</a> -->
       </div>
       <ul id="dropdown" style="display: none;">
@@ -79,14 +79,14 @@
             onclick="toggleNavbar()"
             >Home</a
           >
-          <a
+          <!-- <a
             href="#home-scroll"
             class="dropdown-item kor"
             id="dropdown-kor-home"
             onclick="toggleNavbar()"
             lang="ko"
             >홈</a
-          >
+          > -->
         </li>
         <li>
           <a
@@ -95,37 +95,37 @@
             onclick="toggleNavbar()"
             >Portfolio</a
           >
-          <a
+          <!-- <a
             href="#portfolio-scroll"
             class="dropdown-item kor"
             onclick="toggleNavbar()"
             lang="ko"
             >포트폴리오</a
-          >
+          > -->
         </li>
         <li>
           <a href="#about-scroll" class="dropdown-item eng" onclick="toggleNavbar()"
             >About</a
           >
-          <a
+          <!-- <a
             href="#about-scroll"
             class="dropdown-item kor"
             onclick="toggleNavbar()"
             lang="ko"
             >소개</a
-          >
+          > -->
         </li>
         <li>
           <a href="#contact" class="dropdown-item eng" onclick="toggleNavbar()"
             >Contact</a
           >
-          <a
+          <!-- <a
             href="#contact"
             class="dropdown-item kor"
             onclick="toggleNavbar()"
             lang="ko"
             >연락처</a
-          >
+          > -->
         </li>
         <!-- <li>
           <a
@@ -143,11 +143,11 @@
         <p class="eng">Hi, I'm</p>
         <h1 class="eng"><span>Dom</span> <span>Finlay,</span></h1>
         <h2 class="kor" lang="ko">
-          <span>소프트웨어</span> <span>개발자</span>
+          <!-- <span>소프트웨어</span> <span>개발자</span> -->
         </h2>
         <br />
         <h2 class="eng"><span>a Software </span><span>Developer.</span></h2>
-        <h1 class="kor" lang="ko"><span>도미닉</span></h1>
+        <!-- <h1 class="kor" lang="ko"><span>도미닉</span></h1> -->
         <a id="splash-button" href="#contact">Let's talk.</a>
         <div id="splash-button-shadow"></div>
       </div>
@@ -160,35 +160,47 @@
       <div id="project-info" style="display: none;"></div>
       <div id="project-cards">
       <h2 id="portfolio-title" class="eng">Projects</h2>
-      <h2 id="portfolio-title" class="kor" lang="ko">프로젝트</h2>
+      <!-- <h2 id="portfolio-title" class="kor" lang="ko">프로젝트</h2> -->
       <div id="card-container">
-        <!-- <div class="card-slot">
+        <div class="card-slot">
           <div class="project-card" onclick="displayProject('ideabot')" value="ideabot">
             <h4 class="eng">ideabot</h4>
             <img src="images/ideabot.png" />
+            <div class="project-tagline">
+              <p>AI coding project idea generator</p>
+            </div>
           </div>
           <div class="card-shadow"></div>
         </div>
         <div class="card-slot">
           <div class="project-card" onclick="displayProject('portfolio-website')" value="portfolio-website">
-            <h4 class="eng">Portfolio Website</h4>
-            <img src="images/potfolio-website.png" />
+            <h4 class="eng">Portfolio</h4>
+            <img src="images/dflogo.png" />
+            <div class="project-tagline">
+              <p>This website</p>
+            </div>
           </div>
           <div class="card-shadow"></div>
-        </div> -->
+        </div>
         <div class="card-slot">
           <div class="project-card" onclick="displayProject('pass-the-ball')" value="pass-the-ball">
             <h4 class="eng">Pass the Ball</h4>
             <!-- <h4 class="kor" lang="ko">포모도로 타이머</h4> -->
             <img src="images/passtheball.png" />
+            <div class="project-tagline">
+              <p>Full-stack ESL Game Database</p>
+            </div>
           </div>
           <div class="card-shadow"></div>
         </div>
         <div class="card-slot">
           <div class="project-card" onclick="displayProject('pomodoro')" value="pomodoro">
-            <h4 class="eng">Pomodoro Timer</h4>
+            <h4 class="eng">Pomodoro</h4>
             <!-- <h4 class="kor" lang="ko">포모도로 타이머</h4> -->
             <img src="images/pomodoro.png" />
+            <div class="project-tagline">
+              <p>Adjustable work timer, built with React</p>
+            </div>
           </div>
           <div class="card-shadow"></div>
         </div>
@@ -197,6 +209,9 @@
             <h4 class="eng">Calculator</h4>
             <!-- <h4 class="kor" lang="ko">계산기</h4> -->
             <img src="images/calculator.png" />
+            <div class="project-tagline">
+              <p>Calculator, built with React</p>
+            </div>
           </div>
           <div class="card-shadow"></div>
         </div>
@@ -205,6 +220,9 @@
             <h4 class="eng">Drum Machine</h4>
             <!-- <h4 class="kor" lang="ko">계산기</h4> -->
             <img src="images/drum machine.png" />
+            <div class="project-tagline">
+              <p>React drum machine, playable with your keyboard</p>
+            </div>
           </div>
           <div class="card-shadow"></div>
         </div>
@@ -216,7 +234,7 @@
     <section id="about">
       <div id="about-scroll"></div>
       <h2 id="about-title" class="eng">About</h2>
-      <h2 id="about-title" class="kor" lang="ko">소개</h2>
+      <!-- <h2 id="about-title" class="kor" lang="ko">소개</h2> -->
       <!-- Button toggling short/long version of About section. Current version is grayed out, but has border showing it is the current version displayed. -->
       <!-- Perhaps just have one button -->
       <!-- On hover, text scrolls and changes to 'the long version...' -->
@@ -261,7 +279,7 @@
           dog.
         </p>
       </div>
-      <div id="about-long" class="about-content eng">
+      <!-- <div id="about-long" class="about-content eng">
         <p>Nice to meet you!</p>
         <p>I'm Dom, a self-taught software developer from Merseyside, UK.</p>
         <p>
@@ -290,7 +308,7 @@
         </p>
         <br />
         <p>Thanks for reading! I look forward to working with you.</p>
-      </div>
+      </div> -->
       <div id="dom-pic-container"><img src="images/aboutmepic.jpeg" alt="A picture of me" id="dom-pic" /></div>
     </div>
       <!-- Section for programming languages, frameworks I have worked with. -->
@@ -342,9 +360,9 @@
       </div>
       <div>
         <p class="eng">&copy; Dominic Finlay 2023</p>
-        <p class="kor" lang="ko">&copy; 도미닉 핀레이 2023</p>
+        <!-- <p class="kor" lang="ko">&copy; 도미닉 핀레이 2023</p> -->
         <p class="eng">Designed and built by Dominic Finlay</p>
-        <p class="kor" lang="ko">디자인 및 제작: 도미닉 핀레이</p>
+        <!-- <p class="kor" lang="ko">디자인 및 제작: 도미닉 핀레이</p> -->
       </div>
     </div>
   </footer>
