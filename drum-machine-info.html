@@ -1,40 +1,73 @@
 <div class="project-display">
-  <a onClick="hideProject()" class="exit-project-info"
-    ><i class="fa fa-solid fa-arrow-left"></i> All Projects</a
-  >
-  <h4 class="eng">Drum Machine</h4>
-  <!-- <h4 class="kor" lang="ko"></h4> -->
-  <img src="images/drum machine.png" alt="React Drum Machine Project" />
-  <!-- Logos show languages/frameworks used -->
-  <span class="coding-languages">
-    <i class="devicon-html5-plain-wordmark colored"></i>
-    <i class="devicon-css3-plain-wordmark colored"></i>
-    <i class="devicon-javascript-plain colored"></i>
-    <i class="devicon-react-original-wordmark colored"></i>
+
+  <span>
+    <!-- Back button -->
+    <a onClick="hideProject()" class="exit-project-button">
+      <i class="fa fa-solid fa-arrow-left"></i> All Projects
+    </a>
+    <!-- Title -->
+    <h1>Drum Machine</h1>
   </span>
 
-  <!-- Brief description -->
-  <p class="project-description">
-    React Drum Machine, with 9 separate sounds playable with a click or keyboard
+  <div class="project-container">
+
+    <!-- Screenshot -->
+    <img src="images/drum machine.png" alt="React Drum Machine" class="screenshot"/>
+
+    <hr class="divider" />
+
+    <!-- Brief description -->
+    <div class="description-container">
+      <p class="project-description">
+        React Drum Machine, with 9 separate sounds playable with a click or keyboard
     input, as well as a volume slider and a display, showing the name of the
     current sound.
-  </p>
+      </p>
+    </div>
 
-  <!-- Links to github & demo -->
-  <span class="demo-links">
-    <p>Code & Demo links:</p>
-    <a
-      href="https://github.com/domfinlay/Drum-Machine"
-      target="_blank"
-      style="text-decoration: none"
-      ><i class="fa fa-github"></i
-    ></a>
-    <a
-      href="https://codepen.io/serifim/pen/poxKrdd"
-      target="_blank"
-      style="text-decoration: none"
-    >
-      <i class="devicon-codepen-plain colored"></i>
-    </a>
-  </span>
+    <hr class="divider" />
+
+    <!-- Languages and frameworks used -->
+    <div class="tools-container">
+      <h4>Tools used:</h4>
+      <div class="tools">
+        <p>React</p>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>Javascript</p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Links to github & demo -->
+    <div class="demo-container">
+      <h4>Code and demo links:</h4>
+      <div class="links">
+
+        <span >
+          <a
+            href="https://github.com/domfinlay/Drum-Machine"
+            target="_blank"
+            style="text-decoration: none"
+            class="demo-link"
+          >
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+            <p>Github</p>
+          </a>
+          
+          <a
+            href="https://codepen.io/serifim/pen/poxKrdd"
+            target="_blank"
+            style="text-decoration: none"
+            class="demo-link"
+          >
+            <i class="devicon-codepen-plain colored"></i>
+            <p>Codepen Demo</p>
+          </a>
+          
+        </span>
+      </div>
+    </div>
+  </div>
 </div>

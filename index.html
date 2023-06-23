@@ -50,14 +50,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/eee650d2b3.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <div id="home-scroll"></div>
-    <!-- Logo goes here -->
-    <!-- <img src="static/logo.png" alt="logo" /> -->
     <div class="navbar" id="myNavbar">
-      <a href="#home-scroll" class="not-dropdown eng" id="home" lang="en"><img src="Dom Finlay-1.png" /></a>
+      <!-- Logo goes here -->
+      <a href="#home-scroll" class="not-dropdown eng" id="home" lang="en"><img src="images/dflogo.png" /></a>
       <a href="#home-scroll" class="not-dropdown kor" id="kor-home" lang="ko">홈</a>
       <!-- <a onclick="toggleLanguage()" class="icon" id="language">한국어</a> -->
       <a id="hamburger" class="icon" onclick="toggleNavbar()"> &#9776;</a>
@@ -140,6 +140,7 @@
     </div>
     <section id="splash">
       <div class="splash-content">
+        <p class="eng">Hi, I'm</p>
         <h1 class="eng"><span>Dom</span> <span>Finlay,</span></h1>
         <h2 class="kor" lang="ko">
           <span>소프트웨어</span> <span>개발자</span>
@@ -147,6 +148,8 @@
         <br />
         <h2 class="eng"><span>a Software </span><span>Developer.</span></h2>
         <h1 class="kor" lang="ko"><span>도미닉</span></h1>
+        <a id="splash-button" href="#contact">Let's talk.</a>
+        <div id="splash-button-shadow"></div>
       </div>
     </section>
 
@@ -159,52 +162,51 @@
       <h2 id="portfolio-title" class="eng">Projects</h2>
       <h2 id="portfolio-title" class="kor" lang="ko">프로젝트</h2>
       <div id="card-container">
+        <!-- <div class="card-slot">
+          <div class="project-card" onclick="displayProject('ideabot')" value="ideabot">
+            <h4 class="eng">ideabot</h4>
+            <img src="images/ideabot.png" />
+          </div>
+          <div class="card-shadow"></div>
+        </div>
         <div class="card-slot">
-          <div class="project-card" onclick="displayProject('sseugiro')" value="sseugiro">
-            <h4 class="eng">Sseugiro</h4>
-            <img src="images/sseugiro.png" />
-            <!-- Reverse side / expanded info -->
-            <!-- <p class="eng">test</p> -->
+          <div class="project-card" onclick="displayProject('portfolio-website')" value="portfolio-website">
+            <h4 class="eng">Portfolio Website</h4>
+            <img src="images/potfolio-website.png" />
+          </div>
+          <div class="card-shadow"></div>
+        </div> -->
+        <div class="card-slot">
+          <div class="project-card" onclick="displayProject('pass-the-ball')" value="pass-the-ball">
+            <h4 class="eng">Pass the Ball</h4>
+            <!-- <h4 class="kor" lang="ko">포모도로 타이머</h4> -->
+            <img src="images/passtheball.png" />
           </div>
           <div class="card-shadow"></div>
         </div>
         <div class="card-slot">
           <div class="project-card" onclick="displayProject('pomodoro')" value="pomodoro">
             <h4 class="eng">Pomodoro Timer</h4>
-            <h4 class="kor" lang="ko">포모도로 타이머</h4>
+            <!-- <h4 class="kor" lang="ko">포모도로 타이머</h4> -->
             <img src="images/pomodoro.png" />
-            <!-- Reverse side / expanded info -->
-            <!-- <p class="eng">test</p> -->
           </div>
           <div class="card-shadow"></div>
         </div>
         <div class="card-slot">
           <div class="project-card front" onclick="displayProject('calculator')" value="calculator">
             <h4 class="eng">Calculator</h4>
-            <h4 class="kor" lang="ko">계산기</h4>
+            <!-- <h4 class="kor" lang="ko">계산기</h4> -->
             <img src="images/calculator.png" />
-            <!-- Reverse side / expanded info -->
-            <!-- <p class="eng">test</p> -->
           </div>
           <div class="card-shadow"></div>
         </div>
         <div class="card-slot">
           <div class="project-card" onclick="displayProject('drum-machine')" value="drum-machine">
             <h4 class="eng">Drum Machine</h4>
-            <h4 class="kor" lang="ko">계산기</h4>
+            <!-- <h4 class="kor" lang="ko">계산기</h4> -->
             <img src="images/drum machine.png" />
-            <!-- Reverse side / expanded info -->
-            <!-- <p class="eng">test</p> -->
           </div>
           <div class="card-shadow"></div>
-          <!-- <div class="card-slot">
-            <div class="project-card" onclick="displayProject('pass-the-ball')" value="pass-the-ball">
-              <h4 class="eng">Pass the Ball</h4>
-              <h4 class="kor" lang="ko">테스트</h4>
-              <img src="images/pass-the-ball.png" />
-              <p class="eng">test</p>
-            </div>
-            <div class="card-shadow"></div> -->
         </div>
       </div>
       </div>
@@ -249,12 +251,13 @@
         </p>
         <p>
           I started learning to code while working as a teacher in South Korea,
-          and haven't looked back since. I enjoy breaking down complex problems into simple steps, and building solutions that are both functional and elegant.
+          and haven't looked back since. I love building things with the same playfulness and creativity that made me popular with my students.
+          My diverse life experiences have given me a unique toolbox to work with, complimenting my ever-growing code knowledge with an array of soft skills and useful perspectives.
         </p>
         <p>
           Outside of coding, you can find me spending time taking and developing
           pictures, trying to unearth musical gems from the depths of Spotify
-          and Bandcamp, watching weird old films, or playing with the family
+          and Bandcamp, watching weird old films, learning Korean, or playing with the family
           dog.
         </p>
       </div>

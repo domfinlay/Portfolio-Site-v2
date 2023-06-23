@@ -1,25 +1,77 @@
 <div class="project-display">
-    <a onClick="hideProject()" class="exit-project-info"><i class="fa fa-solid fa-arrow-left"></i> All Projects</a>
-  <!-- Logos show languages/frameworks used -->
-  <span class="coding-languages">
-    <i class="devicon-html5-plain-wordmark colored"></i>
-    <i class="devicon-css3-plain-wordmark colored"></i>
-    <i class="devicon-javascript-plain colored"></i>
-    <i class="devicon-react-original-wordmark colored"></i>
+
+  <span>
+    <!-- Back button -->
+    <a onClick="hideProject()" class="exit-project-button">
+      <i class="fa fa-solid fa-arrow-left"></i> All Projects
+    </a>
+    <!-- Title -->
+    <h1>Pass the Ball</h1>
   </span>
 
-  <!-- Brief description -->
-  <p class="project-description">
-    ESL (English as a Second Language) game database web app, allowing users to view and add entries to the SQL database. Built with HTML, CSS, JavaScript, SQLite, Flask, and Jinja.
-  </p>
+  <div class="project-container">
 
-  <!-- Links to github & demo -->
-  <span class="demo-links">
-    <p>Code & Demo links:</p>
-    <a href="https://github.com/domfinlay/Drum-Machine" target="_blank" style="text-decoration: none"
-      ><i class="fa fa-github"></i
-    ></a>
-    <a href="https://codepen.io/serifim/pen/poxKrdd" target="_blank" style="text-decoration: none"
-      ><i class="devicon-codepen-plain colored"></i></a
-  ></span>
+    <!-- Screenshot -->
+    <img src="images/passtheball.png" alt="pass the ball - an ESL Game Database app" class="screenshot"/>
+
+    <hr class="divider" />
+
+    <!-- Brief description -->
+    <div class="description-container">
+      <p class="project-description">
+        ESL (English as a Second Language) game database web app, allowing users to
+        view and add entries to the SQL database. Built with HTML, CSS, JavaScript,
+        SQLite, Flask, and Jinja.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Languages and frameworks used -->
+    <div class="tools-container">
+      <h4>Tools used:</h4>
+      <div class="tools">
+        <p>Python</p>
+        <p>Flask</p>
+        <p>SQLite</p>
+        <p>HTML</p>
+        <p>Jinja</p>
+        <p>CSS</p>
+        <p>Bootstrap</p>
+        <p>Javascript</p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Links to github & demo -->
+    <div class="demo-container">
+      <h4>Code and demo links:</h4>
+      <div class="links">
+
+        <span >
+          <a
+            href="https://github.com/me50/domfinlay"
+            target="_blank"
+            style="text-decoration: none"
+            class="demo-link"
+          >
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+            <p>Github</p>
+          </a>
+          
+          <a
+            href="https://youtu.be/du2vIx0ZL1c"
+            target="_blank"
+            style="text-decoration: none"
+            class="demo-link"
+          >
+            <i class="fa-brands fa-youtube fa-2xl" style="color: #e70d0d;"></i>
+            <p>Video demo</p>
+          </a>
+          
+        </span>
+      </div>
+    </div>
+  </div>
 </div>

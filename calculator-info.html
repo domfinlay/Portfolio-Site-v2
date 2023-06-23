@@ -1,36 +1,71 @@
 <div class="project-display">
-  <a onClick="hideProject()" class="exit-project-info"
-    ><i class="fa fa-solid fa-arrow-left"></i> All Projects</a
-  >
-  <h4 class="eng">Calculator</h4>
-  <!-- <h4 class="kor" lang="ko">계산기</h4> -->
-  <img src="images/calculator.png" />
-  <!-- Logos show languages/frameworks used -->
-  <span class="coding-languages">
-    <i class="devicon-html5-plain-wordmark colored"></i>
-    <i class="devicon-css3-plain-wordmark colored"></i>
-    <i class="devicon-javascript-plain colored"></i>
-    <i class="devicon-react-original-wordmark colored"></i>
+
+  <span>
+    <!-- Back button -->
+    <a onClick="hideProject()" class="exit-project-button">
+      <i class="fa fa-solid fa-arrow-left"></i> All Projects
+    </a>
+    <!-- Title -->
+    <h1>Calculator App</h1>
   </span>
 
-  <!-- Brief description -->
-  <p class="project-description">
-    React Calculator App, allowing for basic arithmetic operations.
-  </p>
+  <div class="project-container">
 
-  <!-- Links to github & demo -->
-  <span class="demo-links">
-    <p>Code & Demo links:</p>
-    <a
-      href="https://github.com/domfinlay/React-Calculator"
-      target="_blank"
-      style="text-decoration: none"
-      ><i class="fa fa-github"></i
-    ></a>
-    <a
-      href="https://codepen.io/serifim/pen/WNagomJ"
-      target="_blank"
-      style="text-decoration: none"
-      ><i class="devicon-codepen-plain colored"></i></a
-  ></span>
+    <!-- Screenshot -->
+    <img src="images/calculator.png" alt="React Calculator App" class="screenshot"/>
+
+    <hr class="divider" />
+
+    <!-- Brief description -->
+    <div class="description-container">
+      <p class="project-description">
+        React Calculator App, allowing for basic arithmetic operations, and tracking seperate states to remember user input.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Languages and frameworks used -->
+    <div class="tools-container">
+      <h4>Tools used:</h4>
+      <div class="tools">
+        <p>React</p>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>Javascript</p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Links to github & demo -->
+    <div class="demo-container">
+      <h4>Code and demo links:</h4>
+      <div class="links">
+
+        <span >
+          <a
+            href="https://github.com/domfinlay/React-Calculator"
+            target="_blank"
+            style="text-decoration: none"
+            class="demo-link"
+          >
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+            <p>Github</p>
+          </a>
+          
+          <a
+            href="https://codepen.io/serifim/pen/WNagomJ"
+            target="_blank"
+            style="text-decoration: none"
+            class="demo-link"
+          >
+            <i class="devicon-codepen-plain colored"></i>
+            <p>Codepen Demo</p>
+          </a>
+          
+        </span>
+      </div>
+    </div>
+  </div>
 </div>

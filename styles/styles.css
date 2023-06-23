@@ -5,7 +5,7 @@
   --portfolio-colour: rgb(208, 155, 212);
   --card-colour: rgb(202, 77, 211);
   --card-colour-hover: rgb(205, 94, 212);
-  --about-colour: rgb(221, 125, 125);
+  --about-colour: rgb(224, 117, 117);
   --contact-colour: rgb(221, 173, 125);
 }
 
@@ -72,11 +72,12 @@ body {
 
 #home {
   margin-left: 0px;
+  padding: 0;
 }
 
 #home img {
-  width: 220px;
-  height: auto;
+  height: 90px;
+  width: 90px;
   vertical-align: top;
 }
 
@@ -125,7 +126,12 @@ body {
   align-items: center;
 }
 
-/* TODO: Make Korean Splash content larger */
+.splash-content p {
+  font-size: 4vw;
+  -webkit-text-stroke: 2px black;
+  text-shadow: 2px 2px black;
+  margin-bottom: 0;
+}
 
 .splash-content h1 {
   font-size: 8vw;
@@ -140,6 +146,52 @@ body {
   margin: 0;
   -webkit-text-stroke: 2px black;
   text-shadow: 2px 2px black;
+}
+
+#splash-button {
+  border: 4px solid black;
+  border-radius: 12px;
+  background-color: linen;
+  background-image: url("../noise.svg");
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  width: 20%;
+  max-width: 600px;
+  height: 80px;
+  /* box-shadow: 4px 4px 1px grey; */
+  margin-top: 30px;
+  z-index: 7;
+  text-align: center;;
+}
+
+#splash-button-shadow {
+  content: "";
+  position: relative;
+  background-color: black;
+  height: 80px;
+  width: 20%;
+  max-width: 600px;
+  border: 4px solid black;
+  border-radius: 12px;
+  top: -70px;
+  z-index: 1;
+}
+
+#splash-button:hover {
+  color: black;
+  background-color: linen;
+  text-decoration: none;
+  transition: transform 250ms;
+  transform: translateY(10px);
+}
+
+#splash-button:active {
+  color: linen;
+  background-color: black;
+  background-image: url(../noise.svg);
 }
 
 /* Portfolio section */
@@ -245,30 +297,6 @@ body {
 }
 
 /* Project Info section, displayed when a card is clicked */
-/* TODO: Make responsive */
-.project-display {
-  position: relative;
-  margin: 40px 60px;
-}
-
-.exit-project-info {
-  font-family: "Rowdies", sans-serif;
-  font-size: 1.1rem;
-  position: absolute;
-  top: 22px;
-  left: 20px;
-  background-color: var(--card-colour);
-  background-image: url("../noise.svg");
-  border: 4px solid black;
-  border-radius: 10px;
-  padding: 6px;
-}
-
-.exit-project-info:hover {
-  cursor: pointer;
-  background-color: var(--card-colour-hover);
-}
-
 .project-display h4 {
   color: black;
   font-family: "Darumadrop One", cursive;
@@ -277,55 +305,191 @@ body {
   margin-top: 20px;
 }
 
-.project-display img {
-  margin-top: 20px;
-  height: 20%;
-  width: 50%;
-  max-height: 400px;
-  max-width: 600px;
-  min-width: 220px;
-  min-height: 200px;
-  border: 4px solid black;
-  border-radius: 15%;
-  object-fit: cover;
-}
 
-.coding-languages {
+/* Temporary - fixing project info layout */
+.project-container {
+  background-color: var(--card-colour);
+  background-image: url(../noise.svg);
+  border: 6px solid black;
+  border-radius: 12px;
   display: grid;
-  grid-template-columns: repeat(4, 2fr);
-  font-size: 5rem;
-  padding: 30px;
+  grid-template-columns: 6fr 6fr;
+  grid-auto-rows: auto auto;
+  grid-gap: 40px;
+  justify-items: center;
+  width: 90%;
+  margin: 40px auto;
+  padding: 10px;
 }
 
-.project-description {
-  font-family: "Rowdies", sans-serif;
-  font-size: 1.6rem;
-}
-
-.demo-links {
-  font-family: "Rowdies", sans-serif;
-  font-size: 1.4rem;
+.exit-project-button {
+  text-align: center;
   display: inline-block;
-  margin-top: 20px;
+  font-family: "Rowdies", sans-serif;
+  font-size: 1.1rem;
+  position: absolute;
+  top: 44px;
+  left: 88px;
+  background-color: var(--card-colour);
   background-image: url("../noise.svg");
   border: 4px solid black;
   border-radius: 10px;
-  padding: 20px;
+  padding: 6px;
 }
 
-.demo-links p {
-  text-decoration: underline;
+.exit-project-button:hover {
+  cursor: pointer;
+  background-color: var(--card-colour-hover);
 }
 
-.demo-links a {
-  font-size: 6rem;
+.project-display h1 {
+  font-family: 'Darumadrop One', 'Helvetica', 'Arial', sans;
+  font-size: 4rem;
+  display: inline-block;
+}
+
+.screenshot {
+  margin-top: 20px;
+  height: auto;
+  width: 460px;
+  object-fit: contain;
+  border: 4px solid black;
+  border-radius: 12px;
+}
+
+.project-container h4 {
+  font-size: 2.4rem;
+}
+
+.project-container p {
+  font-family: 'Rowdies', sans-serif;
+}
+
+.description-container {
+  margin-top: 20px;
+  height: calc(100% - 20px);
+  display: flex;
+  align-items: center;
+}
+
+.project-description {
+  border: 4px solid black;
+  border-radius: 10px;
+  background-color: var(--card-colour-hover);
+  background-image: url(../noise.svg);
+  width: 400px;
+  height: fit-content;
+  font-size: 1.6rem;
+}
+
+.tools {
+  border: 4px solid black;
+  border-radius: 10px;
+  background-color: var(--card-colour-hover);
+  background-image: url(../noise.svg);
+  display: flex;
+  width: 400px;
+  height: 124px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.tools p {
+  font-size: 1.2rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 4px;
+  margin: 10px;
+  height: 38px;
+}
+
+.demo-container {
+  height: fit-content;
+  margin-bottom: 20px;
+}
+
+.demo-link {
   text-decoration: none;
-  margin: 0 25px;
-  height: 30px;
+  color: black;
+  height: 70px;
 }
 
-.demo-links a:last-of-type {
-  vertical-align: -8px;
+.demo-link img {
+  border: 0px;
+  height: 40px;
+  width: 40px;
+}
+
+.demo-link i {
+  font-size: 1.8rem;
+}
+
+.links {
+  border: 4px solid black;
+  border-radius: 10px;
+  background-color: var(--card-colour-hover);
+  background-image: url(../noise.svg);
+  height: fit-content;
+  width: 360px;
+  height: 124px;
+  padding: 10px;
+}
+
+.links a {
+  font-size: 1.4rem;
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.divider {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .divider {
+    display: block;
+    border: 2px solid black;
+  }
+
+  .project-container {
+    display: block;
+    text-align: left;
+  }
+
+  .exit-project-button {
+    position: static;
+    display: block;
+    width: 200px;
+    margin: 0px auto;
+  }
+
+  .screenshot {
+    display: block;
+    height: auto;
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .description-container {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  .tools-container {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+  }
+
+  .demo-container {
+    display: block;
+    margin: 0px auto;
+    width: fit-content;
+    text-align: center;
+  }
 }
 
 /* About section */
@@ -615,7 +779,21 @@ footer p {
   }
 
   .splash-content h2 {
-    font-size: 6vw;
+    font-size: 5vw;
+    margin-bottom: 0;
+  }
+
+  #splash-content p {
+    font-size: 4vw;
+    margin-top: 20px;
+  }
+
+  #splash-button {
+    /* font-size: 1rem; */
+  }
+
+  #splash-button, #splash-button-shadow {
+    width: 200px;
   }
 
   /* Make Portfolio responsive */
@@ -645,14 +823,6 @@ footer p {
     /* border: 1px solid green; */
   }
   
-  .project-display img {
-    position: relative;
-    display: inline-block;
-    width: 200px;
-    height: 200px;
-    margin-left: 40px;
-  }
-  
   .project-description {
     position: relative;
     display: inline-block;
@@ -663,6 +833,11 @@ footer p {
     font-size: 1.4rem;
     /* border: 1px solid red; */
   }
+
+  .languages-container h4 {
+    font-size: 2rem;
+    font-family: 'Rowdies', sans-serif;
+  } 
   
   .demo-links {
     position: relative;
@@ -778,6 +953,16 @@ footer p {
     font-size: 10vw;
   }
 
+  .splash-content p {
+    font-size: 10vw;
+  }
+
+  #splash-button, #splash-button-shadow {
+    width: 200px;
+    height: 80px;
+    font-size: 1.6rem;
+  }
+
   #portfolio {
     height: auto;
     padding: 20px 0;
@@ -806,16 +991,6 @@ footer p {
     font-size: 2.6rem;
   }
   
-  .project-display img {
-    position: relative;
-    display: inline-block;
-    width: 120px;
-    height: 120px;
-    min-width: 120px;
-    min-height: 120px;
-    margin-left: 20px;
-  }
-  
   .coding-languages {
     font-size: 3.3rem;
   }
@@ -828,6 +1003,11 @@ footer p {
     margin: 20px 10px 10px 10px;
     font-size: 1.2rem;
   }
+
+  .languages-container h4 {
+    font-size: 2rem;
+    font-family: 'Rowdies', sans-serif;
+  } 
   
   .demo-links {
     position: relative;
