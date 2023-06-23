@@ -3,25 +3,30 @@ var englishItems = document.getElementsByClassName("eng");
 var koreanItems = document.getElementsByClassName("kor");
 
 document.addEventListener("DOMContentLoaded", function () {
-  var englishItems = document.getElementsByClassName("eng");
+  // Makes Korean sections hidden by default (language switching currently disabled).
+  // var englishItems = document.getElementsByClassName("eng");
   var koreanItems = document.getElementsByClassName("kor");
   for (var i = 0; i < koreanItems.length; i++) {
     koreanItems[i].style.display = "none";
   }
 
-  // Function to toggle long and short versions of 'about me' section
-  document
-    .getElementById("short-long-toggle")
-    .addEventListener("mouseover", function () {
-      document.getElementById("short-long-toggle").innerHTML =
-        "The long version...";
-    });
-    document
-    .getElementById("short-long-toggle")
-    .addEventListener("mouseout", function () {
-      document.getElementById("short-long-toggle").innerHTML =
-        "The short version...";
-    });
+  // Scrolling to home on DOM load - workaround to fix bug where page scrolls to bottom on load.
+  $("#home-scroll").get(0).scrollIntoView({behavior: 'smooth'});
+
+  // Function to toggle long and short versions of 'about me' section (currently disabled)
+
+  // document
+  //   .getElementById("short-long-toggle")
+  //   .addEventListener("mouseover", function () {
+  //     document.getElementById("short-long-toggle").innerHTML =
+  //       "The long version...";
+  //   });
+  //   document
+  //   .getElementById("short-long-toggle")
+  //   .addEventListener("mouseout", function () {
+  //     document.getElementById("short-long-toggle").innerHTML =
+  //       "The short version...";
+  //   });
 
     // TODO: Make button stay as 'The Long Version...' when the long version is displayed
 });
@@ -105,7 +110,6 @@ function displayProject(project) {
   $("#project-cards").slideToggle(400, function() {
     $("#project-info").slideToggle();
   });
-  // // TODO: Make scrollIntoView work
   $("#portfolio-scroll").get(0).scrollIntoView({behavior: 'smooth'});
 }
 
@@ -114,6 +118,5 @@ function hideProject() {
     $("#project-info").empty();
     $("#project-cards").slideToggle();
   });
-  // // TODO: Make scrollIntoView work
   $("#portfolio-scroll").get(0).scrollIntoView({behavior: 'smooth'});
 }
