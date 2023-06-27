@@ -651,10 +651,11 @@ body {
   padding: 10px;
 }
 
-#contact p {
+#contact-container p {
   font-family: 'Rowdies', sans-serif;
-  width: 300px;
+  width: 100%;
   margin: 10px auto;
+  text-align: center;
 }
 
 #contact-title {
