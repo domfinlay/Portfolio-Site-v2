@@ -704,6 +704,29 @@ body {
   color: black;
 }
 
+#download-cv {
+  font-family: 'Darumadrop One', monospace;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: linen;
+  background-image: url("../noise.svg");
+  color: black;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 8px;
+  cursor: pointer;
+  max-width: 600px;
+  height: fit-content;
+  box-shadow: 0px 4px 0px black;
+  margin: 20px auto auto;
+  text-align: center;
+}
+
+#download-cv:hover {
+  background-color: #000000;
+  color: linen;
+}
+
 /* Footer */
 footer {
   font-family: "Rowdies", sans-serif;
