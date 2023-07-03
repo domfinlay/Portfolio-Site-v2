@@ -185,17 +185,16 @@ body {
 }
 
 #splash-button:hover {
+  border-color: grey;
+  background-image: url(../noise.svg);
+}
+
+#splash-button:active {
   color: black;
   background-color: linen;
   text-decoration: none;
   transition: transform 250ms;
   transform: translateY(10px);
-}
-
-#splash-button:active {
-  color: linen;
-  background-color: black;
-  background-image: url(../noise.svg);
 }
 
 /* Portfolio section */
@@ -335,20 +334,25 @@ body {
   text-align: center;
   display: inline-block;
   font-family: "Rowdies", sans-serif;
-  font-size: 1.1rem;
   position: absolute;
   top: 44px;
   left: 88px;
-  background-color: var(--card-colour);
-  background-image: url("../noise.svg");
   border: 4px solid black;
   border-radius: 10px;
+  background-color: linen;
+  background-image: url("../noise.svg");
+  color: black;
+  font-size: 1.1rem;
+  font-weight: bold;
   padding: 6px;
+  cursor: pointer;
+  box-shadow: 0px 4px 0px black;
+  z-index: 7;
 }
 
 .exit-project-button:hover {
-  cursor: pointer;
-  background-color: var(--card-colour-hover);
+  border-color: grey;
+  background-image: url(../noise.svg);
 }
 
 .project-display h1 {
@@ -653,6 +657,7 @@ body {
 
 #contact-container p {
   font-family: 'Rowdies', sans-serif;
+  font-size: 1.3rem;
   width: 100%;
   margin: 10px auto;
   text-align: center;
@@ -686,9 +691,9 @@ body {
 #contact button {
   border: 4px solid black;
   border-radius: 12px;
-  background-color: black;
+  background-color: linen;
   background-image: url("../noise.svg");
-  color: linen;
+  color: black;
   font-size: 1.3rem;
   font-weight: bold;
   padding: 10px;
@@ -696,12 +701,11 @@ body {
   cursor: pointer;
   width: 100%;
   max-width: 600px;
-  box-shadow: 4px 4px 1px grey;
+  box-shadow: 0px 4px 0px black;
 }
 
 #contact button:hover {
-  background-color: linen;
-  color: black;
+  border-color: grey;
 }
 
 #download-cv {
@@ -722,9 +726,12 @@ body {
   text-align: center;
 }
 
+form label {
+  margin-top: 20px;
+}
+
 #download-cv:hover {
-  background-color: #000000;
-  color: linen;
+  border-color: grey;
 }
 
 /* Footer */
